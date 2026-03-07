@@ -3,11 +3,11 @@ const SCALINGS = {
         get amount() { return player.shark_level },
 
         base: [
-            [10,2,"P"],
-            [100,3,"E2"],
+            [10,1.8,"P"],
+            [100,2,"E2"],
             [1e3,3,"P"],
-            [7.5e9,2,"D"],
-            ['1e1337',3,"D"],
+            [7.5e9,1.95,"D"],
+            ['1e1337',2.9,"D"],
         ],
     },
     shark_rank: {
