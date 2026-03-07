@@ -123,19 +123,19 @@ const SHARK_UPGRADES = {
         unl: ()=>!player.omni.active,
         req: ()=>player.shark_level.gte(3),
 
-        cost: l => Decimal.pow(1.1,l).mul(100),
+        cost: l => Decimal.pow(1.08,l).mul(100),
         bulk: x => x.div(100).log(1.1).floor().add(1),
 
         curr: "fish",
 
-        effect: l=>l.add(1).pow(sharkUpgEffect('s3')),
+        effect: l=>l.add(1.25).pow(sharkUpgEffect('s3')),
         effDesc: x=>formatMult(x),
     },
     s2: {
         unl: ()=>!player.omni.active,
         req: ()=>player.shark_level.gte(7),
 
-        cost: l => Decimal.pow(10,l.pow(1.25)).mul(1e6),
+        cost: l => Decimal.pow(10,l.pow(1.2)).mul(1e6),
         bulk: x => x.div(1e6).log(10).root(1.25).floor().add(1),
 
         curr: "fish",
