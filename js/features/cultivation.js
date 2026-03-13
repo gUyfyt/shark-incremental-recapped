@@ -121,9 +121,9 @@ const MINING_TIER = {
             x[1] = Decimal.pow(5,t_m4)
         }
 
-        if (t.gte(4)) x[2] = Decimal.pow(3,t_m4.sub(3).pow(1.05));
-        if (t.gte(7)) x[3] = Decimal.pow(4,t_m4.sub(6).pow(1.025));
-        if (t.gte(10)) x[4] = Decimal.pow(3,t_m4.sub(9));
+        if (t.gte(4)) x[2] = Decimal.pow(3,t_m4.sub(3).pow(1.15));
+        if (t.gte(7)) x[3] = Decimal.pow(4,t_m4.sub(6).pow(1.1));
+        if (t.gte(10)) x[4] = Decimal.pow(3,t_m4.sub(9).pow(1.05));
         if (t.gte(17)) x[5] = Decimal.pow(3,t.sub(16));
         if (t.gte(21)) x[6] = Decimal.pow(3,t.sub(20));
         if (t.gte(25)) x[7] = Decimal.pow(2,t.sub(24));
