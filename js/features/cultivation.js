@@ -16,34 +16,34 @@ const ORES = {
     },
     'gold': {
         color: '#ffeb3b',
-        dense: 100,
+        dense: 50,
         get mult() { return Decimal.mul(tmp.mining_tier_bonus[3]??1,sharkUpgEffect('m5')).mul(simpleResearchEffect('f6')).pow(tmp.mining_tier_bonus[8]??1) },
     },
     'platinum': {
         color: '#a0b2c6',
-        dense: 2500,
+        dense: 250,
         get mult() { return Decimal.mul(tmp.mining_tier_bonus[4]??1,simpleResearchEffect('f6')).pow(tmp.mining_tier_bonus[8]??1) },
     },
     'bismuth': {
         color: `linear-gradient(0deg, rgb(255,74,220) 0%, rgb(223,177,79) 25%, rgb(239,241,122) 50%, rgb(120,203,109) 75%, rgb(24,247,255) 100%)`,
         textColor: 'rgb(255,74,220)',
-        dense: 1e8,
+        dense: 1e6,
         get mult() { return Decimal.mul(tmp.mining_tier_bonus[5]??1,simpleResearchEffect('f6')).pow(tmp.mining_tier_bonus[8]??1) },
     },
     'diamond': {
         color: '#b9f2ff',
-        dense: 1e11,
+        dense: 1e9,
         get mult() { return Decimal.mul(tmp.mining_tier_bonus[6]??1,simpleResearchEffect('f6')).pow(tmp.mining_tier_bonus[8]??1) },
     },
     'obsidian': {
         color: '#441269',
-        dense: 1e13,
+        dense: 1e10,
         luck_penalty: 0.1,
         get mult() { return Decimal.mul(tmp.mining_tier_bonus[7]??1,simpleResearchEffect('f6')).pow(tmp.mining_tier_bonus[8]??1) },
     },
     'vibranium': {
         color: '#4AE07B',
-        dense: 1e14,
+        dense: 1e12,
         luck_penalty: 0.1,
         get mult() { return Decimal.mul(simpleResearchEffect('f6'),getSharkRankBonus('vibranium')).pow(tmp.mining_tier_bonus[8]??1) },
     },
@@ -121,8 +121,8 @@ const MINING_TIER = {
             x[1] = Decimal.pow(5,t_m4)
         }
 
-        if (t.gte(4)) x[2] = Decimal.pow(3,t_m4.sub(3));
-        if (t.gte(7)) x[3] = Decimal.pow(4,t_m4.sub(6));
+        if (t.gte(4)) x[2] = Decimal.pow(3,t_m4.sub(3).pow(1.05));
+        if (t.gte(7)) x[3] = Decimal.pow(4,t_m4.sub(6).pow(1.025));
         if (t.gte(10)) x[4] = Decimal.pow(3,t_m4.sub(9));
         if (t.gte(17)) x[5] = Decimal.pow(3,t.sub(16));
         if (t.gte(21)) x[6] = Decimal.pow(3,t.sub(20));
