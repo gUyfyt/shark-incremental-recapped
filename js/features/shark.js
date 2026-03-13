@@ -124,7 +124,7 @@ const SHARK_UPGRADES = {
         req: ()=>player.shark_level.gte(3),
 
         cost: l => Decimal.pow(1.08,l).mul(100),
-        bulk: x => x.div(100).log(1.1).floor().add(1),
+        bulk: x => x.div(100).log(1.08).floor().add(1),
 
         curr: "fish",
 
@@ -136,7 +136,7 @@ const SHARK_UPGRADES = {
         req: ()=>player.shark_level.gte(7),
 
         cost: l => Decimal.pow(10,l.pow(1.2)).mul(1e6),
-        bulk: x => x.div(1e6).log(10).root(1.25).floor().add(1),
+        bulk: x => x.div(1e6).log(10).root(1.2).floor().add(1),
 
         curr: "fish",
 
