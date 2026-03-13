@@ -87,7 +87,7 @@ const ORE_KEYS = Object.keys(ORES)
 
 const MINING_TIER = {
     get require() {
-        var x = Decimal.pow(10,player.humanoid.mining_tier.scaleAll("mining_tier").pow(1.25)).mul(100)
+        var x = Decimal.pow(10,player.humanoid.mining_tier.scaleAll("mining_tier").pow(1.175)).mul(100)
 
         return x.ceil()
     },
