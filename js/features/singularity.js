@@ -49,7 +49,7 @@ const REMNANT_UPGS = [
         cost:a=>a.add(1).pow(1.25).pow_base(10),
         bulk:a=>a.log(10).root(1.25).sub(1),
         effect(a) {
-            let x = a.mul(.5).add(1)
+            let x = a.mul(.6).add(1)
             return x
         },
         effDesc: x=>"+"+formatPercent(x.sub(1)),
@@ -58,7 +58,7 @@ const REMNANT_UPGS = [
         cost:a=>a.add(1).pow(1.25).pow_base(2).mul(5e2),
         bulk:a=>a.div(5e2).log(2).root(1.25).sub(1),
         effect(a) {
-            let x = a.pow_base(10)
+            let x = a.pow_base(15)
             return x
         },
         effDesc: x=>formatMult(x),
@@ -67,7 +67,7 @@ const REMNANT_UPGS = [
         cost:a=>a.add(1).pow(1.25).pow_base(10).mul(1e3),
         bulk:a=>a.div(1e3).log(10).root(1.25).sub(1),
         effect(a) {
-            let x = a.root(2).mul(1).add(1)
+            let x = a.root(1.5).mul(1.5).add(1)
             return x
         },
         effDesc: x=>"+"+formatPercent(x.sub(1)),
@@ -76,7 +76,7 @@ const REMNANT_UPGS = [
         cost:a=>a.add(1).pow(1.25).pow_base(5).mul(2e7),
         bulk:a=>a.div(2e7).log(5).root(1.25).sub(1),
         effect(a) {
-            let x = a.pow_base(2)
+            let x = a.pow_base(3)
             return x
         },
         effDesc: x=>formatMult(x),
