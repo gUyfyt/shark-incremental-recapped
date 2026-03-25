@@ -408,7 +408,7 @@ const SPACEBASE_UPGS = {
         bulk:a=>a.div(10).log(3).sumBase(1.05,true).add(1).floor(),
         res: "traject",
         effect(a) {
-            let x = a.pow_base(2)
+            let x = a.pow_base(3)
             return x
         },
         effDesc: x=>formatMult(x),
