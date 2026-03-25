@@ -289,7 +289,7 @@ const SPACEBASE_UPGS = {
         bulk:a=>a.div(1e60).log(10).sumBase(1.05,true).add(1).floor(),
         res: "observ",
         effect(a) {
-            let x = a.pow_base(1.5)
+            let x = a.pow_base(1.75)
             return x
         },
         effDesc: x=>formatMult(x),
@@ -301,7 +301,7 @@ const SPACEBASE_UPGS = {
         bulk:a=>a.div(1e30).log(1e3).sumBase(1.05,true).add(1).floor(),
         res: "reserv",
         effect(a) {
-            let x = a.mul(.05)
+            let x = a.mul(.075)
             return x
         },
         effDesc: x=>"+"+format(x),
@@ -340,7 +340,7 @@ const SPACEBASE_UPGS = {
         bulk:a=>a.div(5).log(3).sumBase(1.05,true).add(1).floor(),
         res: "reserv",
         effect(a) {
-            let base = 2
+            let base = 2.5
             if (hasResearch('o3')) base = Decimal.add(base,spaceBaseUpgEffect('e5',0));
             let x = a.pow_base(base)
             return x
