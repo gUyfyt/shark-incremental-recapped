@@ -162,8 +162,8 @@ const CORE_REACTOR = [
         get req_text() { return CURRENCIES.fish.costName },
         get resource() { return CURRENCIES.fish.amount },
 
-        require: l => l.pow_base(1.1).pow_base('e2.5e6').pow10(),
-        bulk: x => x.log10().log('e2.5e6').log(1.1),
+        require: l => l.pow_base(1.1).pow_base('e1.85e6').pow10(),
+        bulk: x => x.log10().log('e1.85e6').log(1.1),
 
         effect: l=>{
             let x = player.prestige.shards.iteratedlog(10,3).max(0)
