@@ -151,7 +151,7 @@ const CORE_REACTOR = [
         effect: l=>{
             let x = player.fish.iteratedlog(10,3).max(0)
             if (isNaNed(x)) return E(1);
-            x = x.mul(l).div(250).add(1)
+            x = x.mul(l).div(150).add(1)
             if (hasEvolutionTree(32,true)) x = x.pow(2);
             return x
         },
@@ -168,7 +168,7 @@ const CORE_REACTOR = [
         effect: l=>{
             let x = player.prestige.shards.iteratedlog(10,3).max(0)
             if (isNaNed(x)) return E(1);
-            x = x.mul(l).div(250).add(1)
+            x = x.mul(l).div(180).add(1)
             if (hasEvolutionTree(33,true)) x = x.pow(2);
             return x
         },
@@ -185,7 +185,7 @@ const CORE_REACTOR = [
         effect: l=>{
             let x = player.core.fragments.iteratedlog(10,2).max(0)
             if (isNaNed(x)) return E(1);
-            x = x.div(50).add(1).pow(l)
+            x = x.div(35).add(1).pow(l)
             if (hasEvolutionTree(34,true)) x = x.pow(2);
             return x
         },
@@ -202,7 +202,7 @@ const CORE_REACTOR = [
         effect: l=>{
             let x = player.humanoid.shark.iteratedlog(10,1).max(0)
             if (isNaNed(x)) return E(1);
-            x = x.div(10).add(1).pow(l)
+            x = x.div(10).add(1).pow(l.pow(1.1))
             if (hasEvolutionTree(35,true)) x = x.pow(2);
             if (x.gte('ee100000')) x = x.log10().log10().div(1e5).log10().add(1).mul(1e5).pow10().pow10();
             return x
