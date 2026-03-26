@@ -88,7 +88,7 @@ const REMNANT_UPGS = [
         bulk:a=>a.log(100).root(1.25).sub(1),
         effect(a) {
             if (hasResearch('dm2')) a = a.sqr();
-            let x = player.fish.add(1).log10().add(1).log10().add(1).pow(a)
+            let x = player.fish.add(1).log10().add(1).log10().add(1).times(3).add(1).pow(a)
             // if (x.gte('ee100000')) x = x.log10().log10().div(1e5).log10().add(1).mul(1e5).pow10().pow10();
             return x
         },
