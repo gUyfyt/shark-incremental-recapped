@@ -79,7 +79,7 @@ const RESEARCH = {
             ['stone',false,l=>Decimal.pow(10,l).mul(100),x=>x.div(100).log(10).add(1).floor()]
         ],
         effect(r) {
-            return r.mul(0.05)
+            return r.mul(0.1)
         },
         effDesc: x => "^"+format(Decimal.sub(1.25,x)),
     },
