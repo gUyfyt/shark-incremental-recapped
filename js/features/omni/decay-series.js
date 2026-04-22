@@ -50,7 +50,7 @@ const DECAY_CHAIN = [
         boost: [
             [1,1,(x,y)=>x.add(1).log10().mul(y).div(10).add(1),x=>formatPercent(Decimal.sub(x,1))],
             [10,1,(x,y)=>x.add(1).log10().mul(y).div(50).add(1).root(2),x=>formatPercent(Decimal.sub(x,1))],
-            [125,1,(x,y)=>x.add(1).log10().mul(y).div(100).add(1).softcap(100,ISOTOPES.boost(4,1),0),x=>formatPercent(Decimal.sub(x,1))],
+            [125,1,(x,y)=>x.add(1).log10().mul(y).div(85).add(1).softcap(100,ISOTOPES.boost(4,1),0),x=>formatPercent(Decimal.sub(x,1))],
         ],
     },{
         unl: () => player.omni.tier.gte(25),
