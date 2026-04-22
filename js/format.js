@@ -9,7 +9,7 @@ const ST_NAMES = [
 	],[
 		["","Mi","Mc","Na","Pc","Fm","At","Zp","Yc","Rn"],
 		["","Me","D","T","Te","Pn","H","Hp","O","E"],
-		["","c","Is","Tn","Tt","Pc","He","Hn","Ot","Et"],
+		["","c","Is","Tn","Tt","Pt","He","Hn","Ot","Et"],
 		["","H","Dh","Th","Tr","Ph","Hh","Ht","Oh","Eh"]
 	]
 ]
