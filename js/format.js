@@ -264,7 +264,7 @@ const FORMATS = {
   
         let r = ''
         if (x < 10) return ST_NAMES[2][0][x]
-        if (t == 1 && o == 0) r += "Vec"
+        if (t == 1 && o == 0) r += "Qc"
         else r += ST_NAMES[2][1][o] + ST_NAMES[2][2][t]
         r += ST_NAMES[2][3][h]
   
