@@ -629,7 +629,7 @@ CURRENCIES['anti-fish'] = {
         if (player.omni.tier.lt(60)) x = x.overflow(tmp.omni.op_start, Decimal.pow(.5, getOmniReward(50,1)), 2);
         if (player.omni.tier.lt(63)) x = x.overflow('ee1e10', hasResearch('rc3') ? (1/3) ** 0.5 : 1/3, 2);
 
-        tmp.omni.op_penalty = pre.gte(tmp.omni.op_start) ? pre.log10().log10().div(x.log10().log10()) : 1;
+        tmp.omni.op_penalty = pre.gte(tmp.omni.op_start) ? pre.log10().log(9).div(x.log10().log(9)) : 1;
 
         return x
     },
