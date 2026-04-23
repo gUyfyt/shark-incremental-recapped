@@ -81,7 +81,7 @@ function reloadTemp() {
         },
 
         omni: {
-            op_start: E('ee1000'),
+            op_start: E('ee1200'),
             op_penalty: 1,
 
             pause: false,
