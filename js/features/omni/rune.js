@@ -1,6 +1,6 @@
 const RUNES = {
     'fehu': {
-        effect: x => player.fish.add(1).log10().add(1).log10().add(1).log10().div(10).add(1).pow(x.mul(tmp.omni.rune_upgrades[0]).sqrt()),
+        effect: x => player.fish.add(1).log10().add(1).log10().add(1).log10().div(9).add(1).pow(x.mul(tmp.omni.rune_upgrades[0]).sqrt()),
         effDesc: x => formatPow(x,3),
         cost: 1,
     },
